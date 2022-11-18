@@ -598,29 +598,74 @@ void main() {
 #pragma endregion
 
 #pragma region 选择排序(数字升序)
-float arr[10];
-for (int i = 0; i < 10; i++)
-{
-	scanf_s("%f",&arr[i]);
-}
+//float arr[10];
+//for (int i = 0; i < 10; i++)
+//{
+//	scanf_s("%f",&arr[i]);
+//}
+//
+//for (int i = 0; i < 9; i++)//i<n-1
+//{
+//	for (int j = i + 1; j < 10; j++)//j<n
+//	{
+//		if (arr[i] > arr[j])//交换过程
+//		{
+//			float temp = arr[i];
+//			arr[i] = arr[j];
+//			arr[j] = temp;
+//		}
+//	}
+//}
+//for (int i = 0; i < 10; i++)//输出过程
+//{
+//	printf("%.2f ", arr[i]);
+//}
 
-for (int i = 0; i < 9; i++)//i<n-1
+#pragma endregion
+
+#pragma region 韩信点兵
+//问题：
+//韩信有一队兵，他想知道有多少人，便让士兵排队报数：
+//按从1至5报数，最末一个士兵报的数为1；
+//按从1至6报数，最末一个士兵报的数为5；
+//按从1至7报数，最末一个士兵报的数为4；
+//按从1至11报数，最末一个士兵报的数为10；
+//编程求韩信至少有多少兵
+
+//int n = 10;
+//while (1)
+//{
+//	if (n%5==1&&n%6==5&&n%7==4&&n%11==10)
+//	{
+//		printf("%d", n);
+//		break;
+//	}
+//	n++;
+//}
+
+
+#pragma endregion
+
+#pragma region 将二维数组a[N][N]中的元素行列互换，存进本数组a[N][N]中.
+	int a[3][3] = {1,2,3,4,5,6,7,8,9}, temp;
+for (int i = 0; i < 3; i++)
 {
-	for (int j = i + 1; j < 10; j++)//j<n
+	for (int j = 0; j < i; j++)//注意：j<i
 	{
-		if (arr[i] > arr[j])//交换过程
-		{
-			float temp = arr[i];
-			arr[i] = arr[j];
-			arr[j] = temp;
-		}
+		temp = a[i][j];
+		a[i][j] = a[j][i];
+		a[j][i] = temp;
 	}
 }
-for (int i = 0; i < 10; i++)//输出过程
-{
-	printf("%.2f ", arr[i]);
-}
 
+for (int i = 0; i < 3; i++)
+{
+	for (int j = 0; j < 3; j++)
+	{
+		printf("%2d",a[i][j]);
+	}
+	printf("\n");
+}
 #pragma endregion
 
 
