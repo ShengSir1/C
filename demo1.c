@@ -6,6 +6,7 @@
 #include <string.h>
 
 #define MAXSIZE 15
+#define YanghuisanjiaoRows 10
 //typedef int ElemType; //ElemType(自己起的名字) ； typedef int ElemType 即 ElemType与int一样
 
 //冒泡排序
@@ -647,25 +648,49 @@ void main() {
 #pragma endregion
 
 #pragma region 将二维数组a[N][N]中的元素行列互换，存进本数组a[N][N]中.
-	int a[3][3] = {1,2,3,4,5,6,7,8,9}, temp;
-for (int i = 0; i < 3; i++)
-{
-	for (int j = 0; j < i; j++)//注意：j<i
-	{
-		temp = a[i][j];
-		a[i][j] = a[j][i];
-		a[j][i] = temp;
-	}
-}
+//	int a[3][3] = {1,2,3,4,5,6,7,8,9}, temp;
+//for (int i = 0; i < 3; i++)
+//{
+//	for (int j = 0; j < i; j++)//注意：j<i
+//	{
+//		temp = a[i][j];
+//		a[i][j] = a[j][i];
+//		a[j][i] = temp;
+//	}
+//}
+//
+//for (int i = 0; i < 3; i++)
+//{
+//	for (int j = 0; j < 3; j++)
+//	{
+//		printf("%2d",a[i][j]);
+//	}
+//	printf("\n");
+//}
+#pragma endregion
 
-for (int i = 0; i < 3; i++)
-{
-	for (int j = 0; j < 3; j++)
-	{
-		printf("%2d",a[i][j]);
-	}
-	printf("\n");
-}
+#pragma region 打印输出杨辉三角前十行(二维数组)
+//int a[YanghuisanjiaoRows][YanghuisanjiaoRows] = { 0 };
+//for (size_t i = 0; i < YanghuisanjiaoRows; i++)
+//{
+//	a[i][0] = 1;
+//	a[i][i] = 1;
+//}
+//for (size_t i = 2; i < YanghuisanjiaoRows; i++)
+//{
+//	for (size_t j = 1; j < i; j++)
+//	{
+//		a[i][j] = a[i - 1][j - 1] + a[i - 1][j];
+//	}
+//}
+//for (size_t i = 0; i < YanghuisanjiaoRows; i++)
+//{
+//	for (size_t j = 0; j <= i; j++)
+//	{
+//		printf("%4d",a[i][j]);
+//	}
+//	printf("\n");
+//}
 #pragma endregion
 
 
