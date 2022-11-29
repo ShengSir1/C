@@ -23,5 +23,8 @@
     <ClCompile Include="demo1.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="验证哥德巴赫猜想.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
