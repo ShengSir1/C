@@ -35,7 +35,9 @@ int fun(int x,int y) {
 	return m;
 }
 
+
 static int sum = 0,a=0,b=0;
+//求Fibonacci数列
 int f(int n) {
 	sum++;
 	if (n==0)
@@ -51,6 +53,7 @@ int f(int n) {
 	return f(n - 1) + f(n - 2);
 }
 
+//拼接字符串
 void cats(char str1[30],char str2[10]) {
 	int i = 0, k = 0;
 	while (str1[i]!='\0')
@@ -64,6 +67,27 @@ void cats(char str1[30],char str2[10]) {
 	}
 	str1[i] = '\0';
 
+}
+
+//求字符串长度
+int length(char str1[50]) {
+	int i = 0;
+	while (str1[i] != '\0')
+	{
+		i++;
+	}
+	return i;
+}
+
+//复制字符串(str2复制到str1)
+void copy(char str1[50], char str2[50]) {
+	int i = 0,k=0;
+	k = length(str2);
+	for ( ;  i<k ; i++)
+	{
+		str1[i] = str2[i];
+	}
+	str1[i] = '\0';
 }
 
 //字符和整型是通用的 会转换成其值对应的ASCII码值
@@ -717,6 +741,25 @@ void main() {
 //gets(str2);
 //cats(str1, str2);
 //printf("%s",str1);
+#pragma endregion
+
+#pragma region 实现获取字符串长度
+//char str1[50];
+//printf("请输入字符串1\n");
+//gets(str1);
+//int len=length(str1);
+//printf("%s的长度为%d", str1, len);
+#pragma endregion
+
+
+#pragma region 实现复制字符串
+char str1[30], str2[10];
+printf("请输入字符串1:");
+gets(str1);
+printf("请输入字符串2:");
+gets(str2);
+copy(str1, str2);
+printf("str1=%s,str2=%s",str1,str2);
 #pragma endregion
 
 
