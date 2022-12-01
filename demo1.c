@@ -149,7 +149,7 @@ int IsPalindromicNumber2(int number) {
 int IsPalindromicString(char str[]) {
 	int n = length(str);
 	int k = 0;
-	for (int i = 0; i < n/2; i++)
+	for (int i = 0; i <= n/2; i++)
 	{
 		if (str[i]==str[n-i-1])
 		{
@@ -161,6 +161,26 @@ int IsPalindromicString(char str[]) {
 		}
 	}
 	if (k)
+	{
+		return 1;
+	}
+	else
+	{
+		return 0;
+	}
+}
+
+//判断一个整数是否为完数：1为是，0为否
+int IsPerfectNumber(int number) {
+	int sum = 0;
+	for (int i = 1; i <= number/2; i++)
+	{
+		if (number %i==0)//说明i是n的一个因子
+		{
+			sum += i;
+		}
+	}
+	if (sum==number)
 	{
 		return 1;
 	}
@@ -663,22 +683,14 @@ void main() {
 #pragma endregion
 
 #pragma region 编程找出1000之内的所有完数
-//int sum=0 ,x;
+//int x;
+//printf("请问需要找出多少之内的所有完数，请输入一个整数");
 //scanf_s("%d",&x);
-//for (int i = 1; i <= x/2; i++)
+//for (int i = 1; i <= x; i++)
 //{
-//	if (x%i==0)
-//	{
-//		sum += i;
+//	if (IsPerfectNumber(i)) {
+//		printf("%d ", i);
 //	}
-//}
-//if (sum == x)
-//{
-//	printf("%d是完数", x);
-//}
-//else
-//{
-//	printf("%d不是完数", x);
 //}
 #pragma endregion
 
