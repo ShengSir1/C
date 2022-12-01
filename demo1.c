@@ -145,6 +145,31 @@ int IsPalindromicNumber2(int number) {
 	}
 }
 
+//判断是否为回文字符串：1为是，0为否
+int IsPalindromicString(char str[]) {
+	int n = length(str);
+	int k = 0;
+	for (int i = 0; i < n/2; i++)
+	{
+		if (str[i]==str[n-i-1])
+		{
+			k = 1;
+		}
+		else
+		{
+			k = 0;
+		}
+	}
+	if (k)
+	{
+		return 1;
+	}
+	else
+	{
+		return 0;
+	}
+}
+
 //字符和整型是通用的 会转换成其值对应的ASCII码值
 void main() {
 	//int m = 97;
@@ -832,18 +857,31 @@ void main() {
 #pragma endregion
 
 #pragma region 判断一个数是否为回文数(拆分法与构造法)
-printf("请输入一个5位整数：");
-int number = 0;
-scanf_s("%d", &number);
-if (IsPalindromicNumber2(number))
-{
-	printf("Yes Is PalindromicNumber!");
-}
-else
-{
-	printf("Not Is PalindromicNumber!");
-}
+//printf("请输入一个5位整数：");
+//int number = 0;
+//scanf_s("%d", &number);
+//if (IsPalindromicNumber2(number))
+//{
+//	printf("Yes Is PalindromicNumber!");
+//}
+//else
+//{
+//	printf("Not Is PalindromicNumber!");
+//}
 
+#pragma endregion
+
+#pragma region 判断字符串是否为回文
+//printf("请输入字符串：");
+//char str[50];
+//gets(str);
+//if (IsPalindromicString(str)) {
+//	printf("Yes Is PalindromicString");
+//}
+//else
+//{
+//	printf("Not Is PalindromicString");
+//}
 #pragma endregion
 
 
