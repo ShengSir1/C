@@ -108,7 +108,7 @@ void copy(char str1[50], char str2[50]) {
 	str1[i] = '\0';
 }
 
-//判断是否为回文数（拆分法）：1为是，0为否
+//判断是否为回文数（拆分法）：1为是，0为否 --适合判断5位整数
 int IsPalindromicNumber1(int number) {
 	int ge, shi, bai, qian, wan;
 	ge = number % 10;
@@ -126,7 +126,7 @@ int IsPalindromicNumber1(int number) {
 	}
 }
 
-//判断是否为回文数（构造法）：1为是，0为否
+//判断是否为回文数（构造法）：1为是，0为否 --适合判断任意位数整数
 int IsPalindromicNumber2(int number) {
 	int inverseNumber = 0;
 	int num = number;
