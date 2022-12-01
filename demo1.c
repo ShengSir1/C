@@ -50,6 +50,22 @@ int f(int n) {
 	}
 	return f(n - 1) + f(n - 2);
 }
+
+void cats(char str1[30],char str2[10]) {
+	int i = 0, k = 0;
+	while (str1[i]!='\0')
+	{
+		i++;
+	}
+	while (str2[k]!='\0')
+	{
+		str1[i] = str2[k];
+		i++; k++;
+	}
+	str1[i] = '\0';
+
+}
+
 //字符和整型是通用的 会转换成其值对应的ASCII码值
 void main() {
 	//int m = 97;
@@ -693,6 +709,15 @@ void main() {
 //}
 #pragma endregion
 
+#pragma region 编写函数，实现字符串连接(把字符串2拼接到字符串1)
+//char str1[30], str2[10];
+//printf("请输入字符串1");
+//gets(str1);
+//printf("请输入字符串2");
+//gets(str2);
+//cats(str1, str2);
+//printf("%s",str1);
+#pragma endregion
 
 
 #pragma region 计算机模拟试卷一 选择题错题验证过程
