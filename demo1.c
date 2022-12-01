@@ -9,6 +9,24 @@
 #define YanghuisanjiaoRows 10
 //typedef int ElemType; //ElemType(自己起的名字) ； typedef int ElemType 即 ElemType与int一样
 
+//选择排序
+void SelectSort(int array[],int n) {
+	int temp = 0;
+	for (int i = 0; i < n-1; i++)
+	{
+		for (int j = i+1; j < n; j++)
+		{
+			if (array[i]>array[j])
+			{
+				temp = array[i];
+				array[i] = array[j];
+				array[j] = temp;
+			}
+		}
+	}
+}
+
+
 //冒泡排序
 void BubbleSort(int array[], int n) {
 	for (int i = 0; i < n; i++) {
@@ -88,6 +106,24 @@ void copy(char str1[50], char str2[50]) {
 		str1[i] = str2[i];
 	}
 	str1[i] = '\0';
+}
+
+//判断是否为回文数：1为是，0为否
+int IsPalindromicNumber(int number) {
+	int ge, shi, bai, qian, wan;
+	ge = number % 10;
+	shi = number / 10 % 10;
+	bai = number / 100 % 10;
+	qian = number / 1000 % 10;
+	wan = number / 10000 % 10;
+	if (ge==wan&&shi==qian)
+	{
+		return 1;
+	}
+	else
+	{
+		return 0;
+	}
 }
 
 //字符和整型是通用的 会转换成其值对应的ASCII码值
@@ -664,6 +700,21 @@ void main() {
 
 #pragma endregion
 
+#pragma region 选择排序，数字升序（函数法）
+//printf("请输入一串数字");
+//int a[10];
+//for (int i = 0; i < 10; i++)
+//{
+//	scanf_s("%d",&a[i]);
+//}
+//SelectSort(a,10);
+//for (int i = 0; i < 10; i++)//输出过程
+//{
+//	printf("%d ", a[i]);
+//}
+#pragma endregion
+
+
 #pragma region 韩信点兵
 //问题：
 //韩信有一队兵，他想知道有多少人，便让士兵排队报数：
@@ -751,15 +802,29 @@ void main() {
 //printf("%s的长度为%d", str1, len);
 #pragma endregion
 
-
 #pragma region 实现复制字符串
-char str1[30], str2[10];
-printf("请输入字符串1:");
-gets(str1);
-printf("请输入字符串2:");
-gets(str2);
-copy(str1, str2);
-printf("str1=%s,str2=%s",str1,str2);
+//char str1[30], str2[10];
+//printf("请输入字符串1:");
+//gets(str1);
+//printf("请输入字符串2:");
+//gets(str2);
+//copy(str1, str2);
+//printf("str1=%s,str2=%s",str1,str2);
+#pragma endregion
+
+#pragma region 判断一个数是否为回文数
+printf("请输入一个5位整数：");
+int number = 0;
+scanf_s("%d", &number);
+if (IsPalindromicNumber(number))
+{
+	printf("Yes Is PalindromicNumber!");
+}
+else
+{
+	printf("Not Is PalindromicNumber!");
+}
+
 #pragma endregion
 
 
