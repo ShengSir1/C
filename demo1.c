@@ -108,8 +108,8 @@ void copy(char str1[50], char str2[50]) {
 	str1[i] = '\0';
 }
 
-//判断是否为回文数：1为是，0为否
-int IsPalindromicNumber(int number) {
+//判断是否为回文数（拆分法）：1为是，0为否
+int IsPalindromicNumber1(int number) {
 	int ge, shi, bai, qian, wan;
 	ge = number % 10;
 	shi = number / 10 % 10;
@@ -117,6 +117,25 @@ int IsPalindromicNumber(int number) {
 	qian = number / 1000 % 10;
 	wan = number / 10000 % 10;
 	if (ge==wan&&shi==qian)
+	{
+		return 1;
+	}
+	else
+	{
+		return 0;
+	}
+}
+
+//判断是否为回文数（构造法）：1为是，0为否
+int IsPalindromicNumber2(int number) {
+	int inverseNumber = 0;
+	int num = number;
+	while (number)
+	{
+		inverseNumber = inverseNumber * 10 + number % 10;
+		number /= 10;
+	}
+	if (inverseNumber==num)//判断逆序数与原来输入的数相等即为回文数
 	{
 		return 1;
 	}
@@ -812,11 +831,11 @@ void main() {
 //printf("str1=%s,str2=%s",str1,str2);
 #pragma endregion
 
-#pragma region 判断一个数是否为回文数
+#pragma region 判断一个数是否为回文数(拆分法与构造法)
 printf("请输入一个5位整数：");
 int number = 0;
 scanf_s("%d", &number);
-if (IsPalindromicNumber(number))
+if (IsPalindromicNumber2(number))
 {
 	printf("Yes Is PalindromicNumber!");
 }
