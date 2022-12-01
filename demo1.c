@@ -173,7 +173,7 @@ int IsPalindromicString(char str[]) {
 //判断一个整数是否为完数：1为是，0为否
 int IsPerfectNumber(int number) {
 	int sum = 0;
-	for (int i = 1; i <= number/2; i++)
+	for (int i = 1; i <= number/2; i++)//该整数因子的范围
 	{
 		if (number %i==0)//说明i是n的一个因子
 		{
