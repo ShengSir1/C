@@ -912,17 +912,31 @@ void main() {
 //int a[10] = { 1 ， 3 ， 5 ， 7 ， 9 ， 11 ， 13 ， 15 ， 17 ， 19 } ； 请按下列要求用 C 语言编写程序 。
 //（ 1 ） 编写函数 void swap(int* arr, int n) { ...... }, 实现将数组 arr 的前 n 个元素逆序排列 。
 //（ 2 ） 编写主函数 main() {......} 将数组 a 按原顺序输出后 ， 调用 swap() 对数组 a 的全部元素进行逆序排列 ， 然后再次输出数组 a 。
-int a[10] = { 1 , 3  , 5  , 7  ,9  ,11  , 13  , 15  ,17  , 19 };
-for (int i = 0; i < 10; i++)
-{
-	printf("%d ", a[i]);
-}
-swap(a,10);
-printf("\n");
-for (int i = 0; i < 10; i++)
-{
-	printf("%d ", a[i]);
-}
+//int a[10] = { 1 , 3  , 5  , 7  ,9  ,11  , 13  , 15  ,17  , 19 };
+//for (int i = 0; i < 10; i++)
+//{
+//	printf("%d ", a[i]);
+//}
+//swap(a,10);
+//printf("\n");
+//for (int i = 0; i < 10; i++)
+//{
+//	printf("%d ", a[i]);
+//}
+#pragma endregion
+
+#pragma region 指针实现字符串逆序
+//char s[] = "monkey", * p1, * p2, c;
+//p1 = p2 = s;
+//while (*p2) p2++;
+//p2--;
+//while (p2 > p1)
+//{
+//	c = *p1;
+//	*p1++ = *p2;
+//	*p2-- = c;
+//}
+//printf("%s", s);
 #pragma endregion
 
 
