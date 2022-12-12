@@ -9,6 +9,18 @@
 #define YanghuisanjiaoRows 10
 //typedef int ElemType; //ElemType(自己起的名字) ； typedef int ElemType 即 ElemType与int一样
 
+//指针实现字符串连接
+void sss(char* p, char* q) {
+	while (*p) p++;
+	while (*q)
+	{
+		*p = *q;
+		p++;
+		q++;
+	}
+	*p = '\0';
+}
+
 //指针变量接收数组实现逆序排列
 void swap(int* arr, int n) {
 	int t;
@@ -937,6 +949,13 @@ void main() {
 //	*p2-- = c;
 //}
 //printf("%s", s);
+#pragma endregion
+
+#pragma region 指针实现字符串连接（2018年真题）
+//char sl[80] = { "Tang"}, s2 [ 80 ] ={"Shan"};
+//sss(s2, sl);
+//sss(sl,s2);
+//puts(sl);
 #pragma endregion
 
 
