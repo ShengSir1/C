@@ -9,6 +9,17 @@
 #define YanghuisanjiaoRows 10
 //typedef int ElemType; //ElemType(自己起的名字) ； typedef int ElemType 即 ElemType与int一样
 
+//指针变量接收数组实现逆序排列
+void swap(int* arr, int n) {
+	int t;
+	for (int i = 0; i < n/2; i++)
+	{
+		t = arr[i];//arr[i] --顺数第一个数
+		arr[i] = arr[n - i - 1];//arr[n - i - 1] --倒数第一个数
+		arr[n - i - 1] = t;
+	}
+}
+
 //选择排序
 void SelectSort(int array[],int n) {
 	int temp = 0;
@@ -894,6 +905,24 @@ void main() {
 //{
 //	printf("Not Is PalindromicString");
 //}
+#pragma endregion
+
+#pragma region 有关指针往年真题
+//例 ： 已知数组
+//int a[10] = { 1 ， 3 ， 5 ， 7 ， 9 ， 11 ， 13 ， 15 ， 17 ， 19 } ； 请按下列要求用 C 语言编写程序 。
+//（ 1 ） 编写函数 void swap(int* arr, int n) { ...... }, 实现将数组 arr 的前 n 个元素逆序排列 。
+//（ 2 ） 编写主函数 main() {......} 将数组 a 按原顺序输出后 ， 调用 swap() 对数组 a 的全部元素进行逆序排列 ， 然后再次输出数组 a 。
+int a[10] = { 1 , 3  , 5  , 7  ,9  ,11  , 13  , 15  ,17  , 19 };
+for (int i = 0; i < 10; i++)
+{
+	printf("%d ", a[i]);
+}
+swap(a,10);
+printf("\n");
+for (int i = 0; i < 10; i++)
+{
+	printf("%d ", a[i]);
+}
 #pragma endregion
 
 
