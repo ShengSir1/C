@@ -9,9 +9,79 @@
 #define YanghuisanjiaoRows 10
 //typedef int ElemType; //ElemType(自己起的名字) ； typedef int ElemType 即 ElemType与int一样
 
+//排序函数 交换指向法
+void sort(char* name[], int n) {
+	char* pt;
+	int i, j, k;
+	for (i = 0; i < n - 1; i++) {
+		k = i;
+		for (j = i + 1; j < n; j++)
+			if (strcmp(name[k], name[j]) > 0) k = j;//换擂主
+		if (k != i) {
+			pt = name[i];//交换指向
+			name[i] = name[k];//交换指向
+			name[k] = pt; //交换指向          
+		}
+	}
+}
+
+//数组输出函数 
+void print(char* name[], int n) {
+	int i;
+	for (i = 0; i < n; i++)
+		printf("%s\n", name[i]);
+}
+
+//指针实现字符串求长度（不包括 '\0'）递归法
+int strlength2(char* p) {
+	int k = 0;
+	if (*p=='\0')
+	{
+		k = 0;
+	}
+	else
+	{
+		k = 1 + strlength2(p + 1);
+	}
+	return k;
+}
+
+//指针实现字符串求长度（不包括 '\0'）非递归
+int strlength(char *p) {
+	int k = 0;
+	while (*p != '\0')
+	{
+		k++;
+		p++;
+	}
+	return k;
+}
+
+//指针实现字符串比较（返回 0 则表示相等；返回值 大于0 则表示第一个参的值 较大；小于0 则相反）
+int mystrcmp(char *s,char *t) {
+	while (*s==*t)
+	{
+		if (*s == '\0') return 0;//比较结束，返回 0 则表示相等
+		s++;
+		t++;
+	}
+	return *s - *t;//返回值 大于0 则表示第一个参的值 较大；小于0 则相反
+}
+
+//指针实现字符串复制
+void mycopy(char *dstStr,char *srcStr) {
+	while (*srcStr)
+	{
+		*dstStr = *srcStr;
+		dstStr++;
+		srcStr++;
+	}
+	*dstStr = '\0';
+}
+
 //指针实现字符串连接
 void sss(char* p, char* q) {
-	while (*p) p++;
+	while (*p) p++;//找尾
 	while (*q)
 	{
 		*p = *q;
@@ -879,7 +949,7 @@ void main() {
 //gets(str1);
 //int len=length(str1);
 //printf("%s的长度为%d", str1, len);
-#pragma endregion
+#pragma endregion 
 
 #pragma region 实现复制字符串
 //char str1[30], str2[10];
@@ -956,6 +1026,27 @@ void main() {
 //sss(s2, sl);
 //sss(sl,s2);
 //puts(sl);
+#pragma endregion
+
+#pragma region 编程 用递归和非递归两种方式编写函数 strlength().该函数与库函数 strlen() 功能相同 ,返回参数字符串的长度 ( 整型 ) , 不允许调用任何库函数（真题）
+//int a = 0, b = 0;
+//char str[80];
+//printf("请输入一个字符串:\n");
+//gets(str);
+////非递归法：
+//a = strlength(str);
+////递归法：
+//b = strlength2(str);
+//printf("非递归法求的长度为：%d 递归法求的长度为：%d",a,b);
+#pragma endregion
+
+#pragma region 输入5个国家名称并按字母顺序排序后输出(难题)
+//void sort(char* name[], int n);//声明sort函数
+//void print(char* name[], int n);//声明print函数
+//char* name[] = { "CHINA","AMERICA","AUSTRALIA","FRANCE","GERMAN" };
+//int n = 5;
+//sort(name, n);//排序 交换指向法
+//print(name, n);//输出
 #pragma endregion
 
 
