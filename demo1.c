@@ -1047,7 +1047,7 @@ void main() {
 //print(name, n);//输出
 #pragma endregion
 
-#pragma region 2015编程真题
+#pragma region 编程真题 (2015)
 //用 C 语言编写程序对全班同学的学习成绩进行输入 、 统计 、 排序 、 打印 。 假设全班有40 名同学 ， 科目有语文 、 数学 、 英语三门 ， 学生自身信息有
 //学号和姓名 。 输入信息为 ： 学号 （ int) 、姓名 （ 字符串 ） 、 语文 （ float ） 、 数学 （ float ） 、英语 （ float ） 成绩 ， 然后计算每人的平均分
 //（ float ） ， 再按平均分从高到低排序 ， 最后输出排 |序后的结果 ， 每一行一位同学的数据 ， 仍然是按学号 、 姓名 、 语文 、 数学 、 英语成绩的顺序 。
@@ -1090,6 +1090,21 @@ void main() {
 //{
 //	printf("%d%s%f%f%f%f\n", &stu[i].id, stu[i].name, &stu[i].sub.Chinese, &stu[i].sub.Maths, &stu[i].sub.English,&stu[i].AvgScore);
 //}
+#pragma endregion
+
+#pragma region 编程实现构造数
+//求 s = a + aa + aaa + ... + aa...a 之值 ， 其中 a 是一个数字
+//例如 2 + 22 + 222 + 2222 （ 此时 a = 2 ， n = 4 ） ， a 和 n 的值由键盘输入
+//int a = 0, n = 0, s = 0,i = 0,t = 0;
+//printf("请输入 a 和 n\n");
+//scanf_s("%d%d",&a,&n);
+//while (i<n)
+//{
+//	t = t * 10 + a;
+//	s += t;
+//	i++;
+//}
+//printf("S为%d", s);
 #pragma endregion
 
 
