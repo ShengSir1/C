@@ -119,7 +119,6 @@ void SelectSort(int array[],int n) {
 	}
 }
 
-
 //冒泡排序
 void BubbleSort(int array[], int n) {
 	for (int i = 0; i < n; i++) {
@@ -145,7 +144,6 @@ int fun(int x,int y) {
 	i += m + 1; m = i + x + y;
 	return m;
 }
-
 
 static int sum = 0,a=0,b=0;
 //求Fibonacci数列
@@ -1047,6 +1045,51 @@ void main() {
 //int n = 5;
 //sort(name, n);//排序 交换指向法
 //print(name, n);//输出
+#pragma endregion
+
+#pragma region 2015编程真题
+//用 C 语言编写程序对全班同学的学习成绩进行输入 、 统计 、 排序 、 打印 。 假设全班有40 名同学 ， 科目有语文 、 数学 、 英语三门 ， 学生自身信息有
+//学号和姓名 。 输入信息为 ： 学号 （ int) 、姓名 （ 字符串 ） 、 语文 （ float ） 、 数学 （ float ） 、英语 （ float ） 成绩 ， 然后计算每人的平均分
+//（ float ） ， 再按平均分从高到低排序 ， 最后输出排 |序后的结果 ， 每一行一位同学的数据 ， 仍然是按学号 、 姓名 、 语文 、 数学 、 英语成绩的顺序 。
+//struct Subject {
+//	float Chinese;
+//	float Maths;
+//	float English;
+//};
+//struct Student
+//{
+//	int id;
+//	char name[20];
+//	struct Subject sub;
+//	float AvgScore;
+//} stu[40],a;
+////输入：
+//for (int i = 0; i < 40; i++)
+//{
+//	scanf_s("%d%s%f%f%f",&stu[i].id,stu[i].name,&stu[i].sub.Chinese,&stu[i].sub.Maths,&stu[i].sub.English);
+//}
+////计算平均成绩：
+//for (int i = 0; i < 40; i++)
+//{
+//	stu[i].AvgScore = (stu[i].sub.Chinese + stu[i].sub.Maths + stu[i].sub.English) / 3;
+//}
+////从高到低排序(冒泡法)：
+//for (int i = 0; i < 39; i++)
+//{
+//	for (int j = 0; j < 39-i-1; j++)
+//	{
+//		if (stu[j].AvgScore<stu[j+1].AvgScore)
+//		{
+//			a = stu[j];
+//			stu[j] = stu[j + 1];
+//			stu[j + 1] = a;
+//		}
+//	}
+//}
+//for (int i = 0; i < 40; i++)
+//{
+//	printf("%d%s%f%f%f%f\n", &stu[i].id, stu[i].name, &stu[i].sub.Chinese, &stu[i].sub.Maths, &stu[i].sub.English,&stu[i].AvgScore);
+//}
 #pragma endregion
 
 
